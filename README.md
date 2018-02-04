@@ -1,3 +1,5 @@
+![alt text](https://github.com/denisaionita/daw-interface/blob/master/Screen%20Shot%202018-02-04%20at%2021.04.03.png)
+
 # Library
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
