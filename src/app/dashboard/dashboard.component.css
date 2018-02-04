@@ -1,0 +1,81 @@
+ul.navigation-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    font-size: 24px;
+    font-family:Verdana, Geneva, sans-serif;
+    
+}
+
+li button.nav-button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    font-size: 24px;
+    background-color: Transparent;
+    border: none;
+    font-family:Verdana, Geneva, sans-serif;
+    cursor:pointer;
+}
+
+li button.nav-button:focus {
+    outline: 0;
+}
+
+li mat-form-field.input-login-name {
+    position: absolute;
+    right: 27%;
+
+}
+li mat-form-field.input-login-passwd {
+    position: absolute;
+    right: 10%;
+
+}
+li mat-form-field.input-login-email {
+    position: absolute;
+    right: 45%;
+
+}
+
+
+li button.login-submit {
+    float: right;
+    height: 25%;
+    font-size: 24px;
+}
+
+input {
+    color: aliceblue;
+}
+
+nav input.form-control {
+    width: 100%;
+    height: 20px;
+    color: rgb(121, 130, 138);
+}
+
+ul.categories {
+    list-style-type: none;
+}
+
+ul.categories button.category-button {
+    border: 0;
+    cursor: pointer;
+}
+

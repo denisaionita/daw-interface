@@ -1,0 +1,125 @@
+
+<ul class='navigation-list'>
+        <li>
+            <a routerLink="/dashboard" (click)='reset()'>Home</a>
+        </li>
+        
+        <li *ngIf='!signin'>
+                <button color="primary" class='nav-button' (click)="signIn()">Sign in</button>
+        </li>
+        <li *ngIf='!signup'>
+                <button color="primary" class='nav-button' (click)="signUp()">Sign up</button>
+        </li>
+        <!-- Login -->
+        <div *ngIf='signin'>
+           
+           
+            
+            
+            <li>
+                <mat-form-field class="input-login-email">
+                <input matInput placeholder="email"
+                [(ngModel)]='email'>
+                </mat-form-field>
+            </li>
+
+            <li>
+                <mat-form-field class="input-login-passwd">
+                <input type="password" matInput placeholder="password" [(ngModel)]='password'>
+                </mat-form-field>
+            </li>
+
+            <li>
+                <button
+                    color="primary" 
+                    mat-raised-button class="login-submit"
+                    [disabled]="isInvalidSignIn()"
+                    (click)="submitSignIn()">
+                    Login
+                </button>
+            </li>
+            
+        </div>
+        <!-- Sign up -->
+        <div *ngIf='signup'>
+                
+                
+                
+                
+                <li>
+                    <mat-form-field class="input-login-email">
+                    <input matInput 
+                    [(ngModel)]='email'
+                    placeholder="email">
+                    </mat-form-field>
+                </li>
+
+                <li>
+                    <mat-form-field class="input-login-name">
+                    <input matInput 
+                    [(ngModel)]='name'
+                    placeholder="name">
+                    </mat-form-field>
+                </li>
+
+                <li>
+                    <mat-form-field class="input-login-passwd">
+                    <input type="password" matInput
+                    [(ngModel)]='password'
+                    placeholder="password">
+                    </mat-form-field>
+                </li>
+
+                <li>
+                    <button
+                        color="primary"
+                        mat-raised-button
+                        class="login-submit"
+                        [disabled]="isInvalidSignUp()"
+                        (click)='submitSignUp()'>
+                        Submit
+                    </button>
+                </li>
+        </div>
+
+        
+
+</ul>
+
+<div>
+    <img class= "cover" src="http://martijnscheijbeler.com/wp-content/uploads/2018/01/books.jpg"
+    alt="Books" height="350" width="100%">
+</div>
+
+
+<mat-card class="example-card">
+    <mat-card-header>
+        <i>“A room without books is like a body without a soul.” 
+                ― Marcus Tullius Cicero</i>
+                
+    </mat-card-header>
+    <mat-card-content>
+            <br>
+        <!-- <nav class="navbar">
+            <input class="form-control" type="text" name="search" placeholder="Search...">      
+        </nav> -->
+        <div *ngIf='!selectedCategory'>
+            <h3>Select a category:</h3>
+
+            <ul *ngFor='let category of categories' class='categories'>
+                <li>
+                    <button type="button" 
+                        class='category-button' 
+                        (click)="selectCategory(category)">
+                        {{category}}
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf='selectedCategory'>
+            <app-category [category]='selectedCategory'></app-category>
+        </div>
+
+       
+    </mat-card-content>
+</mat-card>
